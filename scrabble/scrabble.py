@@ -1,13 +1,13 @@
 dictionary =  open('dictionary.txt', 'r').read()
 # print(dictionary)
 
-tile_values = {1: ['E', 'A', 'I', 'O', 'N', 'R', 'T', 'L', 'S', 'U'],
-2: ['D', 'G'],
-3: ['B', 'C', 'M', 'P'],
-4: ['F', 'H', 'V', 'W', 'Y'],
-5: 'K',
-8: ['J', 'X'],
-10: ['Q', 'Z']}
+tile_values = {'E': 1, 'A': 1, 'I': 1, 'O': 1, 'N': 1, 'R': 1, 'T': 1, 'L': 1, 'S': 1, 'U': 1,
+'D': 2, 'G': 2,
+'B': 3, 'C': 3, 'M': 3, 'P': 3,
+'F':4, 'H':4, 'V':4, 'W':4, 'Y': 4,
+'K': 5,
+'J':8, 'X': 8,
+'Q':10, 'Z': 10}
 
 tile_distribution = {12: 'E',
 9:	['A', 'I'],
@@ -27,3 +27,11 @@ for key, value in tile_distribution.items():
 
 print(bag)
 
+def score4word(word):
+    score = 0
+    for letter in word:
+        value = tile_values[letter]
+        score += value
+    return score
+
+print(score4word('GUARDIAN'))
