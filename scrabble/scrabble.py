@@ -89,7 +89,11 @@ valid_words = word_checker(combinations)
 print(valid_words)
 
 # Score all valid words, add scores to dictionary where the word is the key and its value is its score called word_scores
-
+def score_words(valid_words):
+    word_scores = {}
+    for word in valid_words:
+        word_scores[F'{word}'] = score4word(word)
+    return word_scores
 
 # Find length of longest word in valid_words.
 
