@@ -94,45 +94,8 @@ def score_words(valid_words):
     for word in valid_words:
         word_scores[F'{word}'] = score4word(word)
     return word_scores
-
+    
 # Find length of longest word in valid_words.
 
 # Find highest value in word_scores, return key.
 
-
-
-# def letter_combinations(rack):
-#     words = []
-#     for i in range(len(rack)):
-#         words.append(rack[i])
-#         for j in range(1,len(rack)):
-#             # if(j == i):
-#             #     continue
-#             # else:
-#             words.append(F'{rack[i]}{rack[j]}')
-#             for k in range(len(rack)):
-#                 if(k == i | k == j):
-#                     continue
-#                 else:
-#                     words.append(F'{rack[i]}{rack[j]}{rack[k]}')
-#                     for l in range(len(rack)):
-#                         if(l == i| l == j | l == k):
-#                             continue
-#                         else:
-#                             words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}')
-#                             for m in range(len(rack)):
-#                                 if(m == i | m == j | m == k | m == l):
-#                                     continue
-#                                 else:
-#                                     words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}')
-#                                     for n in range(len(rack)):
-#                                         if(n == i| n == j | n == k | n == l | n == m):
-#                                             continue
-#                                         else:
-#                                             words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}')
-#                                             for o in range(len(rack)):
-#                                                 if(o == i | o == j | o == k | o == l | o == m | o == n):
-#                                                     continue
-#                                                 else:
-#                                                     words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}{rack[o]}')
-#     return words
