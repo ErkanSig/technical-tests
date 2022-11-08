@@ -47,3 +47,78 @@ rack = take_from_bag()
 
 print(rack)
 print(bag)
+
+
+# Create every combination of 7 characters from rack
+def letter_combinations(rack):
+    words = []
+    for i in range(len(rack)):
+        words.append(rack[i])
+        for j in range(1,len(rack)):
+            if( i != j):
+                words.append(F'{rack[i]}{rack[j]}')
+            for k in range(2,len(rack)):
+                if(i != k):
+                    words.append(F'{rack[i]}{rack[j]}{rack[k]}')
+                for l in range(3,len(rack)):
+                    if(i != l):
+                        words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}')
+                    for m in range(4,len(rack)):
+                        if(i != m):
+                            words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}')
+                        for n in range(5,len(rack)):
+                            if(i != n):
+                                words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}')
+                            for o in range(6,len(rack)):
+                                if(i != o):
+                                    words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}{rack[o]}')
+    return words
+
+combinations = letter_combinations(rack)
+print(combinations[0:100])
+
+# Check whether combination is in dictionary, add combinations that are to list called valid_words
+def 
+# Score all valid words, add scores to dictionary where the word is the key and its value is its score called word_scores
+
+# Find length of longest word in valid_words.
+
+# Find highest value in word_scores, return key.
+
+
+
+# def letter_combinations(rack):
+#     words = []
+#     for i in range(len(rack)):
+#         words.append(rack[i])
+#         for j in range(1,len(rack)):
+#             # if(j == i):
+#             #     continue
+#             # else:
+#             words.append(F'{rack[i]}{rack[j]}')
+#             for k in range(len(rack)):
+#                 if(k == i | k == j):
+#                     continue
+#                 else:
+#                     words.append(F'{rack[i]}{rack[j]}{rack[k]}')
+#                     for l in range(len(rack)):
+#                         if(l == i| l == j | l == k):
+#                             continue
+#                         else:
+#                             words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}')
+#                             for m in range(len(rack)):
+#                                 if(m == i | m == j | m == k | m == l):
+#                                     continue
+#                                 else:
+#                                     words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}')
+#                                     for n in range(len(rack)):
+#                                         if(n == i| n == j | n == k | n == l | n == m):
+#                                             continue
+#                                         else:
+#                                             words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}')
+#                                             for o in range(len(rack)):
+#                                                 if(o == i | o == j | o == k | o == l | o == m | o == n):
+#                                                     continue
+#                                                 else:
+#                                                     words.append(F'{rack[i]}{rack[j]}{rack[k]}{rack[l]}{rack[m]}{rack[n]}{rack[o]}')
+#     return words
