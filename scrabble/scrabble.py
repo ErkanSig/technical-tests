@@ -1,3 +1,4 @@
+import random
 dictionary =  open('dictionary.txt', 'r').read()
 # print(dictionary)
 
@@ -25,7 +26,7 @@ for key, value in tile_distribution.items():
         for i in range(key):
             bag.append(letter)
 
-print(bag)
+# print(bag)
 
 def score4word(word):
     score = 0
@@ -34,4 +35,15 @@ def score4word(word):
         score += value
     return score
 
-print(score4word('GUARDIAN'))
+# print(score4word('GUARDIAN'))
+
+def take_from_bag():
+    rack = random.sample(bag, 7)
+    for letter in rack:
+        bag.remove(letter)
+    return rack
+
+rack = take_from_bag()
+
+print(rack)
+print(bag)
