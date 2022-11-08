@@ -78,8 +78,18 @@ combinations = letter_combinations(rack)
 print(combinations[0:100])
 
 # Check whether combination is in dictionary, add combinations that are to list called valid_words
-def 
+def  word_checker(combinations):
+    valid_words = []
+    for combo in combinations:
+        if combo in dictionary:
+            valid_words.append(combo)
+    return valid_words
+
+valid_words = word_checker(combinations)
+print(valid_words)
+
 # Score all valid words, add scores to dictionary where the word is the key and its value is its score called word_scores
+
 
 # Find length of longest word in valid_words.
 
